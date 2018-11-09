@@ -1,12 +1,21 @@
 
 import React from 'react';
 
+const Header = {
+padding: "10px 20px",
+background: "#F7EF6A",
+  textAlign: "center",
+  color: "white",
+  fontSize: "22px"
+}
+
+
 const Landing = () => (
   <section className="landing">
   <h1 className="hero-title">Turn the music up!</h1>
 
 <section className="selling-points">
-<div className="point">
+<div className="point" style={Header}>
  <h2 className="point-title">Choose your music</h2>
  <p className="point-description">The world is full of music; why should you have to listen to music that someone else chose?</p>
 </div>
