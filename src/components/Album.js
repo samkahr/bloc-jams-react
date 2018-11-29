@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
+import { Grid, Row, Col, Button, Navbar, Media, Nav, NavItem, Jumbotron, Carousel } from 'react-bootstrap';
+import './Album.css';
+import { Link } from 'react-router-dom';
 
 class Album extends Component {
   constructor(props) {
      super(props);
-
-      const album = albumData.find( album => {
+    const album = albumData.find( album => {
       return album.slug === this.props.match.params.slug
     });
 
@@ -129,22 +131,45 @@ class Album extends Component {
      return (
        <section className="album">
 
+       <Navbar>
+         <Nav bsStyle="pills" pullRight >
+           <NavItem>
+          <Button bsStyle="primary" bsSize="large">
+             <Link to='/'>Home</Link>
+             </Button>
+            </NavItem>
+
+          <NavItem>
+             <Button bsStyle="primary" bsSize="large">
+             <Link to='/library'>Library</Link>
+             </Button>
+             </NavItem>
+      </Nav>
+
+          </Navbar>
+
+<Grid>
+<Jumbotron>
        <section id="album-info">
           <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
           <div className="album-details">
           <h1 id="album-title">{this.state.album.title}</h1>
           <h2 className="artist">{this.state.album.artist}</h2>
-          <div id="release-info">{this.state.album.releaseInfo}</div>
+          <h4 id="release-info">{this.state.album.releaseInfo}</h4>
           </div>
         </section>
 
+        <hr></hr>
+
+<h2 className="songList">Song List</h2>
         <table id="song-list">
        <colgroup>
          <col id="song-number-column" />
          <col id="song-title-column" />
          <col id="song-duration-column" />
        </colgroup>
-      <tbody>
+
+   <tbody className="table">
            { this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.onMouseEnter(song)} onMouseLeave={() => this.onMouseLeave(null)} >
              { this.showIcon(song, index) }
@@ -156,7 +181,10 @@ class Album extends Component {
            )
          }
    </tbody>
+
          </table>
+         <br></br>
+
          <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
@@ -170,6 +198,9 @@ class Album extends Component {
           handleTimeChange={(e) => this.handleTimeChange(e)}
           volumeChange={(e) => this.volumeChange(e)}
         />
+
+        </Jumbotron>
+        </Grid>
        </section>
      );
    }

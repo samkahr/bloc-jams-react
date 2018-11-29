@@ -1,0 +1,24 @@
+a {
+    color: #F7EF6A;
+    text-decoration: none;
+}
+.btn-primary {
+  backgroundcolor: #F1BF98;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #E1F4CB;
+}
+
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #E1F4CB;
+  background-size: cover;
+  text-align:center;

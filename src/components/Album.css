@@ -1,0 +1,68 @@
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.navbar-default {
+    background-color: #232720;
+    border-color: #e7e7e7;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #DDDDDD
+}
+
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: #F5EDF0;
+  background-size: cover;
+  text-align: center;
+
+}
+
+.h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #F5EDF0;
+
+  }
+
+  table {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+ }
+
+
+  tr, td, th {
+      font-size: 20px;
+      text-align: center;
+  }
+
+  .songList {
+    text-align: Center;
+
+  }
+
+  hr {
+  width: 50%;
+  border: 1.5px;
+  border-style: solid;
+  }
+
+  PlayerBar {
+    margin-left:auto;
+    margin-right:auto;
+    align-items: center;
+  }

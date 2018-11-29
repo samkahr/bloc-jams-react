@@ -1,0 +1,25 @@
+.navbar-default {
+    background-color: #232720;
+    border-color: #e7e7e7;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #DDDDDD;
+}
+
+h1 {
+  text-align: center;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+display: block;
+height: 90vh;
+max-width: 100%;
+line-height: 1;
+width: 100%;
+text-align: center;
+}
